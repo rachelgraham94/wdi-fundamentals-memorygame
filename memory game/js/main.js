@@ -1,18 +1,37 @@
 const cards = ["queen", "queen", "king", "king"];
 const cardsInPlay = [];
-var cardOne = cards[0];
-var cardTwo = cards[2];
+var cardId = cards[0, 1, 2, 3]
+///add the card that the user flipped
+cardsInPlay.push(cards[cardId]);
+///create a function to store all steps that should happen when the user flips a card.
+function checkForMatch() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+  console.log("You found a match!");
+} else {
+  console.log("Sorry, try again.");
+}
+}
 
-// Store queen in cardsInPlay
-// Store king in cardsInPlay
-
-cardsInPlay.push('queen');
-cardsInPlay.push('king')
-console.log("User flipped queen");
-console.log("User flipped king");
-
-// If both cards stored into cardsInPlay; page will alert "You found a match!"
-
-if (cardsInPlay.length === 2){
-	alert("You found a match!")
+function flipCard(cardId) {
+	console.log("User flipped " + cards[cardId])
+	
 };
+flipCard(0);
+flipCard(2);
+checkForMatch();
+//var cardOne = cards[0];
+//cardsInPlay.push('cardOne');
+//console.log("User flipped " + cardOne);
+
+//var cardTwo = cards[2];
+//cardsInPlay.push('cardTwo')
+//console.log("User flipped " + cardTwo);
+
+
+
+
+
+
+
+
+
